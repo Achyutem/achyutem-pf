@@ -1,0 +1,126 @@
+---
+const themes = [
+  { name: "light", emoji: "🌞" },
+  { name: "dark", emoji: "🌚" },
+  { name: "cupcake", emoji: "🧁" },
+  { name: "bumblebee", emoji: "🐝" },
+  { name: "emerald", emoji: "💚" },
+  { name: "corporate", emoji: "💼" },
+  { name: "synthwave", emoji: "🌈" },
+  { name: "retro", emoji: "📼" },
+  { name: "cyberpunk", emoji: "👾" },
+  { name: "valentine", emoji: "💘" },
+  { name: "halloween", emoji: "🎃" },
+  { name: "garden", emoji: "🌻" },
+  { name: "forest", emoji: "🌲" },
+  { name: "aqua", emoji: "💧" },
+  { name: "lofi", emoji: "🎧" },
+  { name: "pastel", emoji: "🌸" },
+  { name: "fantasy", emoji: "🧙" },
+  { name: "wireframe", emoji: "🕸️" },
+  { name: "black", emoji: "🖤" },
+  { name: "luxury", emoji: "💎" },
+  { name: "dracula", emoji: "🧛" },
+  { name: "cmyk", emoji: "🖨️" },
+  { name: "autumn", emoji: "🍂" },
+  { name: "business", emoji: "📊" },
+  { name: "acid", emoji: "🧪" },
+  { name: "lemonade", emoji: "🍋" },
+  { name: "night", emoji: "🌃" },
+  { name: "coffee", emoji: "☕" },
+  { name: "winter", emoji: "❄️" },
+  { name: "dim", emoji: "🕶️" },
+  { name: "nord", emoji: "🧊" },
+  { name: "sunset", emoji: "🌇" },
+];
+const defaultTheme = "synthwave";
+---
+
+<div class="dropdown dropdown-end">
+  <label tabindex="0" class="btn gap-1 normal-case btn-ghost">
+    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current md:h-6 md:w-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+    Theme
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 opacity-70" fill="none" viewBox="0 0 24 24"
+      stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </label>
+  <ul
+    tabindex="0"
+    class="dropdown-content z-[1] bg-base-100 shadow-lg rounded-box w-48 max-h-80 overflow-y-auto overflow-x-hidden menu flex flex-col scrollbar-visible border border-base-300"
+    style="flex-direction: column; flex-wrap: nowrap;"
+  >
+    {
+      themes.map(theme => (
+      <li class="border-b border-base-200 last:border-none">
+          <button
+            data-set-theme={theme.name}
+            data-act-class="outline"
+            class="btn btn-ghost btn-sm justify-between capitalize w-full"
+          >
+            <span class="mx-auto">{theme.name} {theme.emoji}</span>
+          </button>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  .scrollbar-visible::-webkit-scrollbar {
+    width: 8px;
+  }
+  .scrollbar-visible::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-visible::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  .scrollbar-visible::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .dropdown-content ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .dropdown-content li {
+    width: 100%;
+  }
+</style>
+
+<script is:inline define:vars={{ defaultTheme }}>
+  function applyThemePreference(theme) {
+     const themeToSet = theme || defaultTheme; 
+     document.documentElement.setAttribute("data-theme", themeToSet);
+     localStorage.setItem("theme", themeToSet);
+
+  }
+
+  function setupThemeSwitcher() {
+    const savedTheme = localStorage.getItem('theme');
+    applyThemePreference(savedTheme);
+    const themeLinks = document.querySelectorAll("[data-set-theme]");
+
+    themeLinks.forEach(link => {
+      const clickHandler = (event) => {
+        event.preventDefault();
+        const themeValue = link.getAttribute("data-set-theme");
+        applyThemePreference(themeValue);
+      };
+
+      link.removeEventListener("click", clickHandler);
+      link.addEventListener("click", clickHandler);
+    });
+  }
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+      setupThemeSwitcher();
+  });
+
+  document.addEventListener("astro:after-swap", () => {
+    setupThemeSwitcher();
+  });
+</script>
