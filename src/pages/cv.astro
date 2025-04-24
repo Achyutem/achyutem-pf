@@ -8,6 +8,122 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-3xl w-full font-bold">Profile</div>
   </div>
 
+  <div class="mb-10 text-justify leading-relaxed text-base">
+    I'm a <strong>frontend-focused full stack developer</strong> who builds fast, clean, and reliable web apps with a strong emphasis on user experience. I work primarily in <strong>TypeScript</strong>, using tools like <strong>React</strong>, <strong>Next.js</strong>, and <strong>Tailwind CSS</strong> to create modern, maintainable interfaces.
+  
+    Beyond the frontend, I’m comfortable across the stack — working with <strong>PostgreSQL</strong>, building and consuming <strong>REST APIs</strong>, and managing environments with <strong>Docker</strong>, <strong>Linux</strong>, and <strong>Git</strong>. I care about performance, accessibility, and writing code that’s as intuitive as the product itself.
+  
+    I take pride in building interfaces that feel good to use and codebases that are easy to grow with. Whether it's reducing load time, simplifying flows, or improving developer ergonomics — I bring a thoughtful, practical mindset to every project.
+  </div>  
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Software Developer Intern at S2T.ai"
+      subtitle="03/2024 – 05/2024 at S2T.ai, Singapore"
+    >
+      <div class="mb-2">
+        <strong>In-House Ticketing System</strong> – <em>React.js, TypeScript, Python</em><br/>
+        Re-engineered a client-facing system to support multi-format uploads, reducing manual work and speeding up issue resolution by ~30%. Fixed request-handling bottlenecks, cutting page load times by 1.2s.
+      </div>
+
+      <div class="mb-2">
+        <strong>In-House Document Viewer</strong> – <em>React.js, JavaScript, jQuery</em><br/>
+        Built a cross-platform viewer for PDFs, images, and videos with lazy loading and keyboard nav. Improved render speeds by ~40%, boosting internal usability.
+      </div>
+
+      <div>
+        <strong>Data Integration and Visualization App</strong> – <em>React.js, TypeScript, Reactstrap</em><br/>
+        Created an intuitive dashboard with interactive charts and filters, reducing manual reporting by ~60% and improving rendering by ~50% via smart component reuse.
+      </div>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mx-6 text-sm">
+    <div>
+      <div class="font-semibold mb-2">Languages</div>
+      <ul class="list-disc list-inside ">
+        <li>TypeScript</li>
+        <li>JavaScript</li>
+        <li>SQL</li>
+        <li>Python</li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-semibold  mb-2">Frameworks & APIs</div>
+      <ul class="list-disc list-inside ">
+        <li>React.js</li>
+        <li>Next.js</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>REST APIs</li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-semibold mb-2">Tools & Platforms</div>
+      <ul class="list-disc list-inside ">
+        <li>Git</li>
+        <li>Docker</li>
+        <li>Postman</li>
+        <li>Azure</li>
+        <li>VS Code</li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-semibold mb-2">Databases</div>
+      <ul class="list-disc list-inside ">
+        <li>PostgreSQL</li>
+        <li>SQLite</li>
+        <li>MongoDB</li>
+        <li>Prisma</li>
+      </ul>
+    </div>
+    <div>
+      <div class="font-semibold mb-2">Design & Styling</div>
+      <ul class="list-disc list-inside ">
+        <li>Tailwind CSS</li>
+        <li>CSS</li>
+        <li>HTML</li>
+        <li>Figma</li>
+        <li>shadcnUI</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-5 mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="BCA"
+      subtitle="[2019] to [2022] at [CCSU], [Meerut]"
+    />
+    <TimeLineElement
+      title="Title Name"
+      subtitle="[2022] to [2024] at [MUIT], [Lucknow]"
+    />
+  </div>
+</BaseLayout>
+
+
+<!-- ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
   <div class="mb-10 text-justify">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
@@ -89,4 +205,4 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <li>Skill Name</li>
     <li>Skill Name</li>
   </ul>
-</BaseLayout>
+</BaseLayout> -->
