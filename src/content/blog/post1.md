@@ -5,8 +5,6 @@ pubDate: "Apr 18 2025"
 heroImage: "/cli.png"
 ---
 
-# 12 Must-Have CLI Tools That Deserve a Spot in Your Terminal
-
 Let’s be real, once you get comfortable in the terminal, it starts feeling like home. GUI apps are fine, but the command line? That’s where the magic happens. Over the years, I’ve collected a handful of CLI tools that I keep coming back to—some practical, some powerful, and a couple that just make the terminal _feel_ better.
 
 Here are 12 CLI tools that, in my opinion, deserve a permanent spot in your workflow.
