@@ -5,7 +5,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
   <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects Header</div>
+    <div class="text-3xl w-full font-bold mb-5">Projects</div>
   </div>
 
   <HorizontalCard
@@ -24,9 +24,17 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   />
 
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Projects Header</div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10"> Latest Projects</div>
   </div>
 
+  <HorizontalCard
+    title="EyeRest"
+    img="/eyeRest.png"
+    desc="This small app reminds you to take a short break every 20 minutes by showing a full-screen message for a minute."
+    url="https://github.com/Achyutem/eyeRest"
+    badge="health"
+  />
+  <div class="divider my-0"></div>
   <HorizontalCard
     title="ReadRush"
     img="/book.png"
