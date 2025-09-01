@@ -4,6 +4,153 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <!-- Profile Section -->
+  <div class="mb-8">
+    <div class="text-4xl font-bold tracking-wide bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+      Profile
+    </div>
+  </div>
+
+  <div class="mb-12 text-justify leading-relaxed text-base text-muted-foreground">
+    I'm a <span class="font-semibold underline decoration-dotted">frontend-focused full stack developer</span> who builds fast, clean, and reliable web apps with a strong emphasis on <span class="font-semibold">user experience</span>. I work primarily in <span class="font-semibold text-primary">TypeScript</span>, using tools like <span class="font-semibold">React</span>, <span class="font-semibold">Next.js</span>, and <span class="font-semibold">Tailwind CSS</span> to create modern, maintainable interfaces.
+  
+    Beyond the frontend, I’m comfortable across the stack — working with <span class="font-semibold">PostgreSQL</span>, building and consuming <span class="font-semibold">REST APIs</span>, and managing environments with <span class="font-semibold">Docker</span>, <span class="font-semibold">Linux</span>, and <span class="font-semibold">Git</span>.  
+  </div>  
+
+  <!-- Experience Section -->
+  <div class="mb-8">
+    <div class="text-4xl font-bold tracking-wide bg-gradient-to-r from-emerald-500 to-cyan-500 bg-clip-text text-transparent">
+      Experience
+    </div>
+  </div>
+
+  <div class="space-y-10">
+    <div class="time-line-container">
+      <TimeLineElement
+        title="Software Developer"
+        subtitle="04/2025 – Current at MGUG, Gorakhpur"
+      >
+        <div class="mb-2">
+          <strong class="font-semibold text-primary">Learning Management System (LMS)</strong> – <em>React, TypeScript, Express, Shadcn, Tailwind, MySQL</em><br/>
+          Migrated a legacy <span class="font-semibold">Core PHP</span> LMS to a modern stack. Achieved <span class="font-semibold">~18× faster load speeds</span>, cut server <span class="font-semibold">CPU usage</span> by ~40%, and introduced <span class="font-semibold">modular architecture</span> for scalability.
+        </div>
+        <div class="mb-2">
+          <strong class="font-semibold text-primary">Main University Website</strong> – <em>React, TypeScript, Shadcn, Tailwind, Figma</em><br/>
+          Rebuilt from scratch with <span class="font-semibold">code-splitting</span>, <span class="font-semibold">caching</span>, <span class="font-semibold">SSR</span>, and <span class="font-semibold">lazy loading</span>. Improved Lighthouse scores from <span class="font-semibold">41 → 95</span>, boosted <span class="font-semibold">SEO</span>, and cut load times by ~2.3s.
+        </div>
+        <div>
+          <strong class="font-semibold text-primary">Workflow & Collaboration Hub</strong> – <em>React, TypeScript, Express, Shadcn, Tailwind, MySQL</em><br/>
+          Built internal <span class="font-semibold">task & workflow tool</span> with <span class="font-semibold">role-based dashboards</span> and <span class="font-semibold">real-time updates</span>. Reduced manual coordination by ~50%.
+        </div>
+      </TimeLineElement>
+    </div>
+
+    <div class="time-line-container">
+      <TimeLineElement
+        title="Software Developer Intern"
+        subtitle="03/2024 – 05/2024 at S2T.ai, Singapore"
+      >
+        <div class="mb-2">
+          <strong class="font-semibold text-primary">In-House Ticketing System</strong> – <em>React.js, TypeScript, Python</em><br/>
+          Re-engineered for <span class="font-semibold">multi-format uploads</span>, reducing manual work by ~30% and cutting load times by <span class="font-semibold">1.2s</span>.
+        </div>
+        <div class="mb-2">
+          <strong class="font-semibold text-primary">In-House Document Viewer</strong> – <em>React.js, JavaScript, jQuery</em><br/>
+          Built cross-platform viewer for <span class="font-semibold">PDFs, images & videos</span> with <span class="font-semibold">lazy loading</span> and <span class="font-semibold">keyboard navigation</span>. Improved render speeds by ~40%.
+        </div>
+        <div>
+          <strong class="font-semibold text-primary">Data Visualization App</strong> – <em>React.js, TypeScript, Reactstrap</em><br/>
+          Designed dashboard with <span class="font-semibold">interactive charts</span> and <span class="font-semibold">filters</span>, reducing manual reporting by ~60% and boosting render performance ~50%.
+        </div>
+      </TimeLineElement>
+    </div>
+  </div>
+
+    <!-- Skills Section -->
+  <div class="mt-12 mb-6">
+    <div class="text-4xl font-bold tracking-wide bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent">
+      Skills
+    </div>
+  </div>
+
+  <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mx-2 text-sm">
+    <div class="rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.08)] backdrop-blur-sm p-5">
+      <div class="font-semibold uppercase tracking-wide mb-2">Languages</div>
+      <ul class="list-disc list-inside space-y-1 marker:text-primary">
+        <li><span class="font-medium">TypeScript</span></li>
+        <li><span class="font-medium">JavaScript</span></li>
+        <li><span class="font-medium">SQL</span></li>
+        <li><span class="font-medium">Python</span></li>
+      </ul>
+    </div>
+    <div class="rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.08)] backdrop-blur-sm p-5">
+      <div class="font-semibold uppercase tracking-wide mb-2">Frameworks & APIs</div>
+      <ul class="list-disc list-inside space-y-1 marker:text-primary">
+        <li><span class="font-medium">React.js</span></li>
+        <li><span class="font-medium">Next.js</span></li>
+        <li><span class="font-medium">Node.js</span></li>
+        <li><span class="font-medium">Express.js</span></li>
+        <li><span class="font-medium">REST APIs</span></li>
+      </ul>
+    </div>
+    <div class="rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.08)] backdrop-blur-sm p-5">
+      <div class="font-semibold uppercase tracking-wide mb-2">Tools & Platforms</div>
+      <ul class="list-disc list-inside space-y-1 marker:text-primary">
+        <li><span class="font-medium">Git</span></li>
+        <li><span class="font-medium">Docker</span></li>
+        <li><span class="font-medium">Postman</span></li>
+        <li><span class="font-medium">Azure</span></li>
+        <li><span class="font-medium">VS Code</span></li>
+      </ul>
+    </div>
+    <div class="rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.08)] backdrop-blur-sm p-5">
+      <div class="font-semibold uppercase tracking-wide mb-2">Databases</div>
+      <ul class="list-disc list-inside space-y-1 marker:text-primary">
+        <li><span class="font-medium">PostgreSQL</span></li>
+        <li><span class="font-medium">SQLite</span></li>
+        <li><span class="font-medium">MongoDB</span></li>
+        <li><span class="font-medium">Prisma</span></li>
+      </ul>
+    </div>
+    <div class="rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.08)] backdrop-blur-sm p-5">
+      <div class="font-semibold uppercase tracking-wide mb-2">Design & Styling</div>
+      <ul class="list-disc list-inside space-y-1 marker:text-primary">
+        <li><span class="font-medium">Tailwind CSS</span></li>
+        <li><span class="font-medium">CSS</span></li>
+        <li><span class="font-medium">HTML</span></li>
+        <li><span class="font-medium">Figma</span></li>
+        <li><span class="font-medium">shadcnUI</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Education Section -->
+  <div class="mt-12 mb-6">
+    <div class="text-4xl font-bold tracking-wide bg-gradient-to-r from-pink-500 to-red-500 bg-clip-text text-transparent">
+      Education
+    </div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="BCA"
+      subtitle="2019 – 2022 at CCSU, Meerut"
+    />
+    <TimeLineElement
+      title="MCA"
+      subtitle="2022 – 2024 at MUIT, Lucknow"
+    />
+  </div>
+</BaseLayout>
+
+
+
+<!-- ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Profile</div>
   </div>
@@ -19,6 +166,28 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Experience</div>
   </div>
+
+      <div class="time-line-container mb-10">
+  <TimeLineElement
+    title="Software Developer"
+    subtitle="04/2025 – Current at MGUG, Gorakhpur"
+  >
+    <div class="mb-2">
+      <strong>Learning Management System (LMS)</strong> – <em>React, TypeScript, Express, Shadcn, Tailwind</em><br/>
+      Migrated a legacy Core PHP LMS to a modern React + TypeScript stack with Express backend. Achieved ~18× faster load speeds, cut server CPU usage by ~40%, and introduced modular architecture enabling faster feature rollouts and scalability.
+    </div>
+
+    <div class="mb-2">
+      <strong>Main University Website</strong> – <em>React, TypeScript, Express, Shadcn, Tailwind</em><br/>
+      Rebuilt the official university website from scratch with modern optimizations (code-splitting, caching, SSR, and lazy loading). Reduced average page load by ~2.3s, boosted SEO visibility, and improved Lighthouse performance scores from 41 → 95.
+    </div>
+
+    <div>
+      <strong>Workflow & Collaboration Hub</strong> – <em>React, TypeScript, Express, Shadcn, Tailwind</em><br/>
+      Designed an internal workflow and collaboration tool for faculty and staff. Added role-based dashboards, real-time task updates, and approval flows. Reduced manual coordination by ~50% and improved cross-department visibility into project progress.
+    </div>
+  </TimeLineElement>
+</div>
 
   <div class="time-line-container mb-10">
     <TimeLineElement
@@ -111,4 +280,4 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       subtitle="2022 to 2024 at MUIT, Lucknow"
     />
   </div>
-</BaseLayout>
+</BaseLayout> -->
